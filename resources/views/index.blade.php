@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-10"></div>
-        <h1 class="mt-2">hello index</h1>
+        <h1 class="mt-2">Selamat Datang di perpustakaan Politeknik Negeri Jember</h1>
     </div>
 </div>
 @endsection

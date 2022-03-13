@@ -23,7 +23,7 @@
         }
 
         a {
-            background-color: transparent
+            background-color: blue
         }
 
         [hidden] {
@@ -60,7 +60,7 @@
 
         .bg-white {
             --bg-opacity: 1;
-            background-color: #fff;
+            background-color: blue;
             background-color: rgba(255, 255, 255, var(--bg-opacity))
         }
 

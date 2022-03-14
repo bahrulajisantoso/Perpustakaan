@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-10">
             <h1 class="mt-3">Daftar mahasiswa</h1>
-            <table class="table">
-                <thead class="thead-dark">
+            <table class="table table-striped border border-primary">
+                <thead class="text-light bg-primary">
                     <tr>
                         <th scope="col">No.</th>
                         <th scope="col">Nim</th>

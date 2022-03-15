@@ -25,7 +25,12 @@
                         <td>{{ $mhs->jurusan}}</td>
                         <td>
                             <a href="" class="badge badge-success">edit</a>
-                            <a href="" class="badge badge-danger">delete</a>
+                            <form action="{{ url ('mahasiswa/'.$mhs->id) }}" method="POST" class="d-inline">
+                                @csrf 
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="badge badge-danger border-0" onclick="return confirm ('Yakin untuk mengahapus ?')">
+                                    delete<span data-feather="x-circle"></span></button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

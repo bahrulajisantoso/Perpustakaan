@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-10">
-            <h1 class="mt-3">Daftar mahasiswa</h1>
+            <h1 class="mt-3">Daftar Mahasiswa</h1>
             <a href="{{ route('mahasiswa.create') }}" class="btn btn-primary btn-xs pull-right">Tambah Mahasiswa</a>
             <table class="table table-striped border border-primary">
                 <thead class="text-light bg-primary">
@@ -25,7 +25,7 @@
                         <td>{{ $mhs->nama}}</td>
                         <td>{{ $mhs->jurusan}}</td>
                         <td>
-                            <a href="" class="badge badge-success">edit</a>
+                            <a href="{{ url ('mahasiswa/'.$mhs->id.'/edit') }}" class="badge badge-success">edit</a>
                             <form action="{{ url ('mahasiswa/'.$mhs->id) }}" method="POST" class="d-inline">
                                 @csrf 
                                 <input type="hidden" name="_method" value="DELETE">

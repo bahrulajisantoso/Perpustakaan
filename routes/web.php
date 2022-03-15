@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'App\Http\Controllers\PagesController@home');
-Route::get('/mahasiswa', 'App\Http\Controllers\MahasiswaController@index');
+
 
 Route::resource('buku', 'App\Http\Controllers\BukuController', []);
+Route::resource('mahasiswa', 'App\Http\Controllers\MahasiswaController', []);

@@ -25,7 +25,7 @@ class MahasiswaController extends Controller
         // return view('mahasiswa', ['mahasiswa' => $mahasiswa]);
 
         $mahasiswa = \App\Models\Student::all();
-        return view('mahasiswa', ['mahasiswa' => $mahasiswa]);
+        return view('mahasiswa.index', compact('mahasiswa'));
     }
 
     /**

@@ -36,7 +36,7 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        //
+        return view ('mahasiswa.create');
     }
 
     /**
@@ -47,7 +47,13 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $mahasiswa = new Student();
+        $mahasiswa->nim = $request->nim;
+        $mahasiswa->nama = $request->nama;
+        $mahasiswa->jurusan = $request->jurusan;
+        $mahasiswa->save();
+
+        return redirect()->route('mahasiswa.index');
     }
 
     /**

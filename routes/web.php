@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Buku;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +23,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\PagesController@home');
 Route::get('/mahasiswa', 'App\Http\Controllers\MahasiswaController@index');
-Route::get('/buku', 'App\Http\Controllers\BukuController@index');
+
+Route::resource('buku', 'App\Http\Controllers\BukuController', []);

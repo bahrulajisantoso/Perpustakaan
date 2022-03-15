@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Buku;
 use Illuminate\Http\Request;
 
 class BukuController extends Controller
@@ -14,7 +15,7 @@ class BukuController extends Controller
     public function index()
     {
         $buku = \App\Models\Buku::all();
-        return view('buku', ['buku' => $buku]);
+        return view('buku.index', compact('buku'));
     }
 
     /**
@@ -24,7 +25,7 @@ class BukuController extends Controller
      */
     public function create()
     {
-        //
+        return view('buku.create');
     }
 
     /**
@@ -35,7 +36,17 @@ class BukuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        $buku = new Buku();
+        $buku->judul_buku = $request->judul_buku;
+        $buku->penulis = $request->penulis;
+        $buku->penerbit = $request->penerbit;
+        $buku->tahun_terbit = $request->tahun_terbit;
+        $buku->stok = $request->stok;
+        $buku->save();
+
+        return redirect()->route('buku.index');
     }
 
     /**

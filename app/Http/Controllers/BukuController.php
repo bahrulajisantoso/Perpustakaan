@@ -68,7 +68,8 @@ class BukuController extends Controller
      */
     public function edit($id)
     {
-        //
+        $buku = Buku::find($id);
+        return view('buku.edit', compact('buku'));
     }
 
     /**
@@ -76,11 +77,20 @@ class BukuController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
+     * 
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $buku = Buku::find($id);
+        $buku->judul_buku = $request->judul_buku;
+        $buku->penulis = $request->penulis;
+        $buku->penerbit = $request->penerbit;
+        $buku->tahun_terbit = $request->tahun_terbit;
+        $buku->stok = $request->stok;
+        $buku->save();
+
+        return redirect()->route('buku.index');
     }
 
     /**
@@ -91,6 +101,8 @@ class BukuController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $buku = Buku::find($id);
+        $buku->delete();
+        return redirect('buku');
     }
 }

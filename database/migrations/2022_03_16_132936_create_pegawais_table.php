@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('pegawais', function (Blueprint $table) {
             $table->id();
             $table->string('nama_pegawai');
-            $table->string('no_telp');
+            $table->string('no_hp');
             $table->string('email');
             $table->timestamps();
         });

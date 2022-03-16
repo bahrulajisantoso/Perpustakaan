@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">
             <img src="{{URL::asset('/img/logo-polije.png')}}" width="50" height="50" class="d-inline-block align-center" alt="">
-    Poliyey
+            Polije
 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +36,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/pegawai">Data Pegawai</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pegawai">Peminjaman</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About us</a>

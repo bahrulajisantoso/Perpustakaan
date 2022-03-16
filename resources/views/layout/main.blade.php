@@ -35,6 +35,9 @@
                     <a class="nav-link" href="/buku">Data Buku</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/pegawai">Data Pegawai</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">About us</a>
                 </li>
             </ul>

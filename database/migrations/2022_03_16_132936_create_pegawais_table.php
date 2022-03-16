@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_pegawai');
             $table->string('no_telp');
+            $table->string('email');
             $table->timestamps();
         });
     }

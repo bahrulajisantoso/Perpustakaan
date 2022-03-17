@@ -9,29 +9,38 @@
                 @csrf
                 <input type="hidden" name="_method" value="PATCH">
                 <div class="card" style="width: 30rem;">
-                <div class="card-body">
-                <div class="form-group">
-                  <label for="nim">NIM</label>
-                  <input type="text" name ="nim" class="form-control" id="nim" value="{{ $mhs->nim }}" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" name ="nama" class="form-control" id="nama"  value="{{ $mhs->nama }}" required>
-                   
-                </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="nim">NIM</label>
+                            <input type="text" name="nim" class="form-control" id="nim" value="{{ $mhs->nim }}" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="jurusan">Jurusan</label>
-                    <input type="text" name ="jurusan" class="form-control" id="jurusan"   value="{{ $mhs->jurusan }}" required>
-                   
-                </div>
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" name="nama" class="form-control" id="nama" value="{{ $mhs->nama }}" required>
 
-                <button type="submit" class="btn btn-primary ">Simpan</button>
-              </form>
-        </div>
-        </div>
+                        </div>
+
+                        <div class="form-group">
+                            <select name="jenis_kelamin">
+                                <option value="{{ $mhs->jenis_kelamin }}">{{ $mhs->jenis_kelamin }}</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jurusan">Jurusan</label>
+                            <input type="text" name="jurusan" class="form-control" id="jurusan" value="{{ $mhs->jurusan }}" required>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary ">Simpan</button>
+            </form>
         </div>
     </div>
+</div>
+</div>
 </div>
 @endsection

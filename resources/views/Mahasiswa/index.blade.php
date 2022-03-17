@@ -12,6 +12,7 @@
                         <th scope="col">No.</th>
                         <th scope="col">Nim</th>
                         <th scope="col">Nama</th>
+                        <th scope="col">Jenis Kelamin</th>
                         <!-- <th scope="col">Email</th> -->
                         <th scope="col">Jurusan</th>
                         <th scope="col">Aksi</th>
@@ -23,11 +24,13 @@
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $mhs->nim}}</td>
                         <td>{{ $mhs->nama}}</td>
+                        <td>{{ $mhs->jenis_kelamin}}</td>
                         <td>{{ $mhs->jurusan}}</td>
+
                         <td>
                             <a href="{{ url ('mahasiswa/'.$mhs->id.'/edit') }}" class="badge badge-success">edit</a>
                             <form action="{{ url ('mahasiswa/'.$mhs->id) }}" method="POST" class="d-inline">
-                                @csrf 
+                                @csrf
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="badge badge-danger border-0" onclick="return confirm ('Yakin untuk mengahapus ?')">
                                     delete<span data-feather="x-circle"></span></button>

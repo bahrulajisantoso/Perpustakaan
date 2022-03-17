@@ -51,6 +51,7 @@ class MahasiswaController extends Controller
         $mahasiswa->nim = $request->nim;
         $mahasiswa->nama = $request->nama;
         $mahasiswa->jurusan = $request->jurusan;
+        $mahasiswa->jenis_kelamin = $request->jenis_kelamin;
         $mahasiswa->save();
 
         return redirect()->route('mahasiswa.index');
@@ -92,6 +93,7 @@ class MahasiswaController extends Controller
         $mahasiswa->nim = $request->nim;
         $mahasiswa->nama = $request->nama;
         $mahasiswa->jurusan = $request->jurusan;
+        $mahasiswa->jenis_kelamin = $request->jenis_kelamin;
         $mahasiswa->save();
 
         return redirect()->route('mahasiswa.index');

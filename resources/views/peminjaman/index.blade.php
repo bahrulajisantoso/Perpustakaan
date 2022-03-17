@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-10">
             <h1 class="mt-3">Data Peminjaman</h1>
-            <a href="{{ route('pegawai.create') }}" class="btn btn-primary btn-xs pull-right">Tambah Pegawai</a>
+            <a href="{{ route('peminjaman.create') }}" class="btn btn-primary btn-xs pull-right">Tambah Pegawai</a>
             <table class="table table-striped border border-primary">
                 <thead class="text-light bg-primary">
                     <tr>

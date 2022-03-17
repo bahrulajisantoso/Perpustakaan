@@ -38,7 +38,7 @@
                     <a class="nav-link" href="/pegawai">Data Pegawai</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pegawai">Peminjaman</a>
+                    <a class="nav-link" href="/peminjaman">Peminjaman</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About us</a>

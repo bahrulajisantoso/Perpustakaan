@@ -43,6 +43,7 @@ class PeminjamanController extends Controller
         $peminjaman->nama_pegawai = $request->nama_pegawai;
         $peminjaman->tgl_pinjam = $request->tgl_pinjam;
         $peminjaman->tgl_kembali = $request->tgl_kembali;
+        $peminjaman->status = $request->status;
         $peminjaman->save();
 
         return redirect()->route('peminjaman.index');
@@ -82,11 +83,7 @@ class PeminjamanController extends Controller
     public function update(Request $request, $id)
     {
         $peminjaman = Peminjaman::find($id);
-        $peminjaman->nama_peminjam = $request->nama_peminjam;
-        $peminjaman->judul_buku = $request->judul_buku;
-        $peminjaman->nama_pegawai = $request->nama_pegawai;
-        $peminjaman->tgl_pinjam = $request->tgl_pinjam;
-        $peminjaman->tgl_kembali = $request->tgl_kembali;
+        $peminjaman->status = $request->status;
         $peminjaman->save();
 
         return redirect()->route('peminjaman.index');

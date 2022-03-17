@@ -15,6 +15,7 @@
                         <th scope="col">Nama_pegawai</th>
                         <th scope="col">Tanggal Pinjam</th>
                         <th scope="col">Tanggal Kembali</th>
+                        <th scope="col">Status Peminjaman</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
@@ -27,6 +28,7 @@
                         <td>{{ $pmj->nama_pegawai}}</td>
                         <td>{{ $pmj->tgl_pinjam}}</td>
                         <td>{{ $pmj->tgl_kembali}}</td>
+                        <td>{{ $pmj->status}}</td>
                         <td>
                             <a href="{{ url ('peminjaman/'.$pmj->id.'/edit') }}" class="badge badge-success">edit</a>
                             <form action="{{ url ('pegawai/'.$pmj->id) }}" method="POST" class="d-inline">

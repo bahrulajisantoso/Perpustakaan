@@ -15,22 +15,27 @@
                         </div>
                         <div class="form-group">
                             <label for="judul_buku">Judul Buku</label>
-                            <input type="text" name="judul_buku" class="form-control" id="judul_buku" placeholder="Masukkan Nama" required>
+                            <input type="text" name="judul_buku" class="form-control" id="judul_buku" placeholder="Masukkan Judul" required>
                         </div>
 
                         <div class="form-group">
                             <label for="nama_pegawai">Pegawai</label>
-                            <input type="text" name="nama_pegawai" class="form-control" id="nama_pegawai" placeholder="Masukkan No HP" required>
+                            <input type="text" name="nama_pegawai" class="form-control" id="nama_pegawai" placeholder="Masukkan Nama" required>
                         </div>
 
                         <div class="form-group">
                             <label for="tgl_pinjam">Tanggal Pinjam</label>
-                            <input type="date" name="tgl_pinjam" class="form-control" id="tgl_pinjam" placeholder="Masukkan Email" required>
+                            <input type="date" name="tgl_pinjam" class="form-control" id="tgl_pinjam" placeholder="Masukkan Tanggal" required>
                         </div>
 
                         <div class="form-group">
                             <label for="tgl_kembali">Tanggal Kembali</label>
-                            <input type="date" name="tgl_kembali" class="form-control" id="tgl_kembali" placeholder="Masukkan Email" required>
+                            <input type="date" name="tgl_kembali" class="form-control" id="tgl_kembali" placeholder="Masukkan Tanggal" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <input type="text" name="status" value="Belum Kembali" class="form-control" id="status"  readonly required>
                         </div>
 
                         <button type="submit" class="btn btn-primary ">Simpan</button>

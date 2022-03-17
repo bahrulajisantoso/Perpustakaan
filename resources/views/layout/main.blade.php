@@ -13,8 +13,7 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
         <a class="navbar-brand" href="#">
             <img src="{{URL::asset('/img/logo-polije.png')}}" width="50" height="50" class="d-inline-block align-center" alt="">
             Polije
@@ -23,27 +22,28 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
+                <div class="dropdown">
+                    <a class="btn btn-primary dropdown-toggle dropdown-toggle-split " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                        Data
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/mahasiswa">Data Mahasiswa</a>
+                        <a class="dropdown-item" href="/pegawai">Data Pegawai</a>
+                        <a class="dropdown-item" href="/buku">Data Buku</a>
+                        <a class="dropdown-item" href="/peminjaman">Peminjaman</a>
+                    </div>
+                </div>
                 <li class="nav-item">
-                    <a class="nav-link" href="/buku">Data Buku</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pegawai">Data Pegawai</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/peminjaman">Peminjaman</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About us</a>
+                    <a class="nav-link" href="/about">About us</a>
                 </li>
             </ul>
+        </div>
         </div>
     </nav>
     @yield('container')

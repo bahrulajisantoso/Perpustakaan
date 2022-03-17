@@ -14,7 +14,7 @@ class PeminjamanController extends Controller
      */
     public function index()
     {
-        $pegawai = \App\Models\Peminjaman::all();
+        $peminjaman =Peminjaman::all();
         return view('peminjaman.index', compact('peminjaman'));
     }
 
@@ -89,7 +89,7 @@ class PeminjamanController extends Controller
         $peminjaman->tgl_kembali = $request->tgl_kembali;
         $peminjaman->save();
 
-        return redirect()->route('pegawai.index');
+        return redirect()->route('peminjaman.index');
     }
     /**
      * Remove the specified resource from storage.

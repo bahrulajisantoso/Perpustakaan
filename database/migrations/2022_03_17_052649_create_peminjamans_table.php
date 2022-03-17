@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('nama_pegawai');
             $table->date('tgl_pinjam');
             $table->date('tgl_kembali');
+            $table->enum('status_peminjaman', ['belum kembali', 'sudah kembali']);
             $table->timestamps();
         });
     }

@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('nim')->unique();
+            $table->char('nim', 9)->unique();
             $table->string('nama');
             $table->string('jurusan');
+            $table->enum('jenis_kelamin', ['laki-laki', 'perempuan']);
             $table->timestamps();
         });
     }
